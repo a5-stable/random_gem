@@ -1,12 +1,14 @@
-require "wonder_who/request"
+require "random_gem/request"
 require 'timeout'
 
-module WonderWho
+module RandomGem
   class Randomizer
     class Error < Exception; end
+    TIMEOUT = 30.seconds.freeze
+    PAGE = 100.freeze
 
     def perform
-      gems = Timeout.timeout(30, WonderWho::Randomizer::Error) { random_pick_loop }
+      gems = Timeout.timeout(TIMEOUT, RandomGem::Randomizer::Error) { random_pick_loop }
       pick_single_gem(gems: gems)
     end
 
@@ -14,14 +16,14 @@ module WonderWho
 
     def random_pick_loop
       loop do
-        request = WonderWho::Request.new(keyword: random_letter, page: random_index(max: 100))
+        request = RandomGem::Request.new(keyword: random_letter, page: random_index(max: PAGE))
         gems = request.do
 
         break gems if gems.length > 0
       end
     end
 
-    def pick_single_gem_name(gems:)
+    def pick_single_gem(gems:)
       index = random_index(max: gems.length)
       gems[index]
     end

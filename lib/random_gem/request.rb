@@ -2,7 +2,7 @@ require 'net/http'
 require 'rubygems'
 require 'open-uri'
 
-module WonderWho
+module RandomGem
   class Request
     HOST = "https://rubygems.org"
     PATH = "/api/v1/search"

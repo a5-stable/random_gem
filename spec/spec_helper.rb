@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "wonder_who"
+require "random_gem"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

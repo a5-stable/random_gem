@@ -1,8 +1,8 @@
-require_relative 'lib/wonder_who/version'
+require_relative 'lib/random_gem/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "wonder_who"
-  spec.version       = WonderWho::VERSION
+  spec.name          = "random_gem"
+  spec.version       = RandomGem::VERSION
   spec.authors       = ["a5-stable"]
   spec.email         = ["sh07e1916@gmail.com"]
 

@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    wonder_who (0.1.0)
-      gems
+    random_gem (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -29,7 +28,7 @@ PLATFORMS
 DEPENDENCIES
   rake (~> 12.0)
   rspec (~> 3.0)
-  wonder_who!
+  random_gem!
 
 BUNDLED WITH
    2.1.4

@@ -1,6 +1,6 @@
-RSpec.describe WonderWho do
+RSpec.describe RandomGem do
   it "has a version number" do
-    expect(WonderWho::VERSION).not_to be nil
+    expect(RandomGem::VERSION).not_to be nil
   end
 
   it "does something useful" do
