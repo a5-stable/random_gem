@@ -1,3 +1,4 @@
+require "random_gem/cli"
 require "random_gem/randomizer"
 require "random_gem/version"
 
