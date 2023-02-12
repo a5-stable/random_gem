@@ -4,7 +4,7 @@ require 'timeout'
 module RandomGem
   class Randomizer
     class Error < Exception; end
-    TIMEOUT = 30.seconds.freeze
+    TIMEOUT = 30.freeze
     PAGE = 100.freeze
 
     def perform

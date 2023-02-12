@@ -27,8 +27,8 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 12.0)
-  rspec (~> 3.0)
   random_gem!
+  rspec (~> 3.0)
 
 BUNDLED WITH
    2.1.4
