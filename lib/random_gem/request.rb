@@ -1,6 +1,7 @@
 require 'net/http'
 require 'rubygems'
 require 'open-uri'
+require 'json'
 
 module RandomGem
   class Request
@@ -14,26 +15,20 @@ module RandomGem
     end
 
     def do
-      uri = URI.parse("#{HOST}#{PATH}")
-      uri.query = URI.encode_www_form({ query: keyword, page: page })
+      uri = URI("#{HOST}#{PATH}")
+      params = { query: keyword, page: page }
+      uri.query = URI.encode_www_form(params)
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
 
-      req = Net::HTTP::Get.new(uri.request_uri)
-      res = http.request req
-
+      res = http.get(uri.request_uri)
       respond(res: res)
     end
 
     private
-    
-    def conn
-      @conn ||= Net::HTTP.new(uri.host, uri.port)
-    end
 
     def respond(res:)
-      require 'json'
       JSON.parse(res.body)
     end
   end
