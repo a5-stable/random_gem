@@ -1,4 +1,6 @@
 # RandomGem
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Gem Version](https://badge.fury.io/rb/random_gem.svg)](https://badge.fury.io/rb/random_gem)
 
 RandomGem is a Ruby gem that selects a random gem from RubyGems and returns its name.  
 Also, it provides a command to add a random gem to your Gemfile.
