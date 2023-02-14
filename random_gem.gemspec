@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sh07e1916@gmail.com"]
 
   spec.summary       = "pick up a random gem from rubygems"
-  spec.description   = "RandomGem is a Ruby gem that selects a random gem from RubyGems and returns its name. Also, it provides a command to add a random gem to your Gemfile."
+  spec.description   = "RandomGem is a Ruby gem that picks a random gem from RubyGems and returns its info. Also, it provides a command to add a random gem to your Gemfile."
   spec.homepage      = "https://github.com/a5-stable/random_gem"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

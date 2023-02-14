@@ -1,6 +1,6 @@
 # RandomGem
 
-RandomGem is a Ruby gem that selects a random gem from RubyGems and returns its name.  
+RandomGem is a Ruby gem that picks a random gem from RubyGems and returns its info.  
 Also, it provides a command to add a random gem to your Gemfile.
 
 ## Installation
