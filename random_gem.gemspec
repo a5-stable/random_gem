@@ -6,17 +6,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["a5-stable"]
   spec.email         = ["sh07e1916@gmail.com"]
 
-  spec.summary       = "https://github.com/a5-stable"
-  spec.description   = "https://github.com/a5-stable"
-  spec.homepage      = "https://github.com/a5-stable"
+  spec.summary       = "pick up a random gem from rubygems"
+  spec.description   = "RandomGem is a Ruby gem that selects a random gem from RubyGems and returns its name. Also, it provides a command to add a random gem to your Gemfile."
+  spec.homepage      = "https://github.com/a5-stable/random_gem"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/a5-stable"
-  spec.metadata["changelog_uri"] = "https://github.com/a5-stable"
+  spec.metadata["source_code_uri"] = "https://github.com/a5-stable/random_gem"
+  spec.metadata["changelog_uri"] = "https://github.com/a5-stable/random_gem"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
