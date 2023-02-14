@@ -1,8 +1,7 @@
 # RandomGem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/random_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+RandomGem is a Ruby gem that selects a random gem from RubyGems and returns its name.  
+Also, it provides a command to add a random gem to your Gemfile.
 
 ## Installation
 
@@ -11,6 +10,8 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'random_gem'
 ```
+
+
 
 And then execute:
 
@@ -22,23 +23,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Selecting a random gem
+
+`RandomGem.pick` returns the info of a random gem.
+
+```ruby
+require 'random_gem'
+
+RandomGem.pick 
+#=> { "documentation_uri"=>"XXXXX", ..., "name"=>"XXXX", "version_downloads"=>0, "info"=>"XXXX", "authors"=>"XXXX" }
+```
+### Adding a gem to your Gemfile
+This command will add a random gem to your Gemfile on a new line.
+```sh
+bundle exec random_gem add
+```
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/random_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/random_gem/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/a5-stable/random_gem.  
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
+## Warning
+When installing an unknown gem, it is important to verify that it is safe to use. While RandomGem selects random gems from RubyGems, it is not responsible for any issues that may arise from installing these gems. Please use this gem at your own risk and carefully consider the potential risks of installing unknown gems.
 
-Everyone interacting in the RandomGem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/random_gem/blob/master/CODE_OF_CONDUCT.md).
+## Notes
+RandomGem relies on the RubyGems API, so please ensure that you have a stable internet connection before using this gem.
