@@ -1,22 +1,26 @@
 require "random_gem/request"
+require "random_gem/query"
 require 'timeout'
 
 module RandomGem
   class Randomizer
     class Error < Exception; end
-    TIMEOUT = 30.freeze
-    PAGE = 100.freeze
+    TIMEOUT = 10.freeze
+    PAGE = 10.freeze
 
-    def perform
-      gems = Timeout.timeout(TIMEOUT, RandomGem::Randomizer::Error) { random_pick_loop }
+    def perform(download_options: {})
+      gems = Timeout.timeout(TIMEOUT, RandomGem::Randomizer::Error) { random_pick_loop(download_options: download_options) }
       pick_single_gem(gems: gems)
     end
 
     private
 
-    def random_pick_loop
+    def random_pick_loop(download_options:)
       loop do
-        request = RandomGem::Request.new(keyword: random_letter, page: random_index(max: PAGE))
+        query = Query.new(random_letter, download_options: download_options)
+        page = random_index(max: PAGE)
+
+        request = RandomGem::Request.new(query, page)
         gems = request.do
 
         break gems if gems.length > 0
